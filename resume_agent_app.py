@@ -9,13 +9,13 @@ load_dotenv()
 
 # Streamlit page settings
 st.set_page_config(page_title="Resume Compare", layout="centered")
-st.markdown("<h1 style='text-align: center; color:green;'>📄🆚📄 Resume Compare</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color:green;'> Resume Compare</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size:18px;'>AI-Powered Resume vs Job Description Comparison</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # How to Use
-with st.expander("ℹHow to Use"):
     st.markdown("""
+    How to Use?
     1. **Upload your resume** as a PDF.
     2. **Paste or upload** the job description.
     3. Click **Run Evaluation** to get an AI-generated rating and explanation.
