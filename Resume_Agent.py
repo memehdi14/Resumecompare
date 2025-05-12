@@ -19,7 +19,7 @@ def create_embeddings(resume_texts):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     return Chroma.from_texts(resume_texts, embeddings)
 def evaluate_resumes_with_gpt(resume_texts_with_scores, job_description):
-    model = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash", temperature=0)
+    model = ChatGoogleGenerativeAI(model="models/gemini-2.0-flash", temperature=0)
     results = []
 
     for resume_text, similarity_score in resume_texts_with_scores:
