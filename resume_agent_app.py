@@ -15,9 +15,9 @@ st.markdown("---")
 
 # How to Use
 st.markdown("""How to Use?
-    1. **Upload your resume** as a PDF.
-    2. **Paste or upload** the job description.
-    3. Click **Run Evaluation** to get an AI-generated rating and explanation.
+1. **Upload your resume** as a PDF.
+2. **Paste or upload** the job description.
+ 3. Click **Run Evaluation** to get an AI-generated rating and explanation.
     """)
 
 # --- Resume Upload ---
