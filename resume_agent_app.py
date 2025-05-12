@@ -18,7 +18,7 @@ This tool uses AI to evaluate how well a resume matches a job description using 
 
 ---
 
-### 🧠 How to Use:
+### How to Use:
 1. **Upload your resume** as a PDF.
 2. **Paste or upload** the job description.
 3. Click **Run Evaluation** to get an AI-generated rating and explanation.
@@ -68,7 +68,5 @@ if run_button:
         st.text_area("💬 GPT Feedback", results[0]["gpt_response"], height=300)
 
 # --- Footer ---
-st.markdown("""
-Created with **LangChain** and **Gemini**  
-by *Mehdi Namdar*
-""", unsafe_allow_html=True)
+st.markdown("---")
+st.caption("Built with LangChain + Gemini | by Mehdi Namdar")
