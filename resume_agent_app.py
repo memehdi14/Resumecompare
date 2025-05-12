@@ -1,42 +1,76 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 import pdfplumber
+from dotenv import load_dotenv
 from Resume_Agent import parse_resume, evaluate_resumes_with_gpt
 
-dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
-load_dotenv(dotenv_path)
+# Load environment variables
+load_dotenv()
 
-st.title("Resume Evaluation Agent")
+# Streamlit page settings
+st.set_page_config(page_title="Resume Evaluation Agent", layout="centered")
+st.title("📄 Resume Evaluation Agent")
 
-# Upload resume
+# --- App Info Section ---
+st.markdown("""
+Welcome to the **Resume Evaluation Agent**!  
+This tool uses AI to evaluate how well a resume matches a job description using LangChain + Gemini.
+
+---
+
+### 🧠 How to Use:
+1. **Upload your resume** as a PDF.
+2. **Paste or upload** the job description.
+3. Click **Run Evaluation** to get an AI-generated rating and explanation.
+""")
+
+# --- Resume Upload ---
+st.header("📤 Step 1: Upload Your Resume")
 uploaded_resume = st.file_uploader("Upload Resume (PDF)", type="pdf")
 
-# Upload job description PDF
-st.markdown("### Job Description")
-jd_col1, jd_col2 = st.columns([4, 1])
+# --- Job Description Upload ---
+st.header("📄 Step 2: Provide the Job Description")
+col1, col2 = st.columns([4, 1])
 
-with jd_col1:
-    jd_text = st.text_area("Paste Job Description Here (optional)", height=200)
+with col1:
+    jd_text = st.text_area("Paste Job Description (optional)", height=200)
 
-with jd_col2:
-    jd_pdf = st.file_uploader("Upload JD (PDF)", type="pdf", key="jd")
+with col2:
+    jd_pdf = st.file_uploader("Or Upload JD (PDF)", type="pdf")
 
-# Extract JD text if a JD PDF is uploaded
+# Extract text from JD PDF if uploaded
 if jd_pdf:
     with pdfplumber.open(jd_pdf) as pdf:
         jd_text = ""
         for page in pdf.pages:
             jd_text += page.extract_text()
 
-# Evaluation logic
-if uploaded_resume and jd_text.strip():
-    with open("temp_resume.pdf", "wb") as f:
-        f.write(uploaded_resume.read())
-    resume_text = parse_resume("temp_resume.pdf")
+# --- Run Evaluation Button ---
+st.header("🚀 Step 3: Run Evaluation")
+run_button = st.button("Run Evaluation")
 
-    # You can tweak the similarity score as needed or remove it
-    results = evaluate_resumes_with_gpt([(resume_text, 0.95)], jd_text)
+if run_button:
+    if not uploaded_resume:
+        st.warning("Please upload a resume.")
+    elif not jd_text.strip():
+        st.warning("Please provide a job description (paste or upload).")
+    else:
+        # Save resume and process
+        with open("temp_resume.pdf", "wb") as f:
+            f.write(uploaded_resume.read())
+        resume_text = parse_resume("temp_resume.pdf")
 
-    st.subheader("GPT Evaluation (with Rating):")
-    st.text_area("GPT Output", results[0]["gpt_response"], height=300)
+        # Evaluate
+        results = evaluate_resumes_with_gpt([(resume_text, 0.95)], jd_text)
+
+        # Show result
+        st.header("📊 Evaluation Result")
+        st.success("Resume evaluated successfully!")
+        st.text_area("💬 GPT Feedback", results[0]["gpt_response"], height=300)
+
+# --- Footer ---
+st.markdown("""
+---
+🔧 Created with **LangChain** and **Gemini**  
+👨‍💻 by *Mehdi Namdar*
+""", unsafe_allow_html=True)
