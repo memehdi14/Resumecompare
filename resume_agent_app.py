@@ -9,7 +9,7 @@ load_dotenv()
 
 # Streamlit page settings
 st.set_page_config(page_title="Resume Evaluation Agent", layout="centered")
-st.title("📄 Resume Evaluation Agent")
+st.title("Resume Evaluation Agent")
 
 # --- App Info Section ---
 st.markdown("""
@@ -25,11 +25,11 @@ This tool uses AI to evaluate how well a resume matches a job description using 
 """)
 
 # --- Resume Upload ---
-st.header("📤 Step 1: Upload Your Resume")
+st.subheader("Step 1: Upload Your Resume")
 uploaded_resume = st.file_uploader("Upload Resume (PDF)", type="pdf")
 
 # --- Job Description Upload ---
-st.header("📄 Step 2: Provide the Job Description")
+st.subheader("Step 2: Provide the Job Description")
 col1, col2 = st.columns([4, 1])
 
 with col1:
@@ -46,7 +46,6 @@ if jd_pdf:
             jd_text += page.extract_text()
 
 # --- Run Evaluation Button ---
-st.header("🚀 Step 3: Run Evaluation")
 run_button = st.button("Run Evaluation")
 
 if run_button:
@@ -70,7 +69,6 @@ if run_button:
 
 # --- Footer ---
 st.markdown("""
----
-🔧 Created with **LangChain** and **Gemini**  
-👨‍💻 by *Mehdi Namdar*
+Created with **LangChain** and **Gemini**  
+by *Mehdi Namdar*
 """, unsafe_allow_html=True)
