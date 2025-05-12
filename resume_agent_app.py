@@ -9,12 +9,9 @@ load_dotenv()
 
 # Streamlit page settings
 st.set_page_config(page_title="Resume Evaluation Agent", layout="centered")
-st.title("Resume Evaluation Agent")
-
-# --- App Info Section ---
-st.markdown("""
-Welcome to the **Resume Evaluation Agent**!  
-This tool uses AI to evaluate how well a resume matches a job description using LangChain + Gemini.
+st.markdown("<h1 style='text-align: center; color:green;'>🛡 Resume Compare/h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size:18px;'>AI-Powered Resume-Job Description Comparision</p>", unsafe_allow_html=True)
+st.markdown("---")
 
 ---
 
