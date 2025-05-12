@@ -10,7 +10,7 @@ langchain-google-genai
 google-genai
 google-auth
 python-dotenv
-
+langchain-community
 # --- Data Processing ---
 pandas
 
