@@ -14,8 +14,7 @@ st.markdown("<p style='text-align: center; font-size:18px;'>AI-Powered Resume vs
 st.markdown("---")
 
 # How to Use
-    st.markdown("""
-    How to Use?
+    st.markdown("""How to Use?
     1. **Upload your resume** as a PDF.
     2. **Paste or upload** the job description.
     3. Click **Run Evaluation** to get an AI-generated rating and explanation.
