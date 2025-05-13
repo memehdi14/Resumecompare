@@ -8,7 +8,7 @@ from Resume_Agent import parse_resume, evaluate_resumes_with_gpt
 load_dotenv()
 
 # Streamlit page settings
-st.set_page_config(page_title="Resume Compare", layout="centered")
+st.set_page_config(page_title="🔀Resume Compare", layout="centered")
 st.markdown("<h1 style='text-align: center; color:green;'> Resume Compare</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size:18px;'>AI-Powered Resume vs Job Description Comparison</p>", unsafe_allow_html=True)
 st.markdown("---")
