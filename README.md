@@ -97,8 +97,9 @@ Suggestions: Includes specific tools mentioned in JD
 I’m Mehdi Namdar — passionate about AI, automation, and building meaningful tools.
 If you found this project useful or have ideas to improve it, feel free to connect or contribute.
 Let’s build something better together!
+Drop a mail at: Namdar.Mehdi14@gmail.com
 ```
-[GitHub](https://github.com/memehdi14) [LinkedIn](https://in.linkedin.com/in/mohammad-mehdi-namdar-042609327) [Email](Namdar.medhi14@gmail.com) [Instagram](instagram.com/MehXBot)
+[GitHub](https://github.com/memehdi14) [LinkedIn](https://in.linkedin.com/in/mohammad-mehdi-namdar-042609327) [Instagram](https://www.instagram.com/mehxbot/profilecard)
 ---
 #### License
 
