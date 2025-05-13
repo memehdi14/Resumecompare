@@ -7,7 +7,7 @@
 
 ---
 
-##Features
+## Features
 
 - Upload resume in PDF format
 - Paste or upload a job description (PDF optional)
@@ -32,7 +32,7 @@
 
 ## Getting Started
 
-### 1. Clone the Repo
+1. Clone the Repo
 
 ```bash
 git clone https://github.com/memehdi14/compareresume.git
@@ -51,7 +51,7 @@ pip install protobuf==3.20.3 --no-cache-dir
 ```
 ---
 
-Environment Setup
+## Environment Setup
 
 Create a .env file in the root directory:
 ```
@@ -69,7 +69,7 @@ Open http://localhost:XXXX in your browser.
 
 ---
 
-Project Structure
+## Project Structure
 ```
 compareresume/
 ├── resume_agent_app.py       # Streamlit frontend
@@ -92,7 +92,7 @@ Suggestions: Includes specific tools mentioned in JD
 
 
 ---
-About me:-
+#### About me:-
 ```
 I’m Mehdi Namdar — passionate about AI, automation, and building meaningful tools.
 If you found this project useful or have ideas to improve it, feel free to connect or contribute.
@@ -100,13 +100,14 @@ Let’s build something better together!
 ```
 [GitHub](https://github.com/memehdi14) [LinkedIn](https://in.linkedin.com/in/mohammad-mehdi-namdar-042609327) [Email](Namdar.medhi14@gmail.com) [Instagram](instagram.com/MehXBot)
 ---
-License
+#### License
 
 MIT License — free for personal and commercial use. Credit appreciated
 
 ---
-Contribute
+#### Contribute
 
-Open to ideas, pull requests, and collaborations. Feel free to fork and enhance!
-
+Open to ideas, pull requests, and collaborations. 
+Feel free to fork and enhance!
+Credit would be appreciated but not neccesite.......
 ---
