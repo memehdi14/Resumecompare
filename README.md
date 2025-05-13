@@ -112,3 +112,12 @@ Open to ideas, pull requests, and collaborations.
 Feel free to fork and enhance!
 Credit would be appreciated but not neccesite.......
 ---
+
+## Acknowledgments
+
+Built with ❤️ using:
+
+* Google Gemini
+* LangChain
+* Streamlit
+
