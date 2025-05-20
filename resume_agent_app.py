@@ -69,4 +69,4 @@ if run_button:
 
 # --- Footer ---
 st.markdown("---")
-st.caption("Built with LangChain + Gemini | by Mehdi Namdar")
+st.caption("Demo| Built with LangChain + Gemini | by Mehdi Namdar")
